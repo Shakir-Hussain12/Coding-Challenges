@@ -13,14 +13,15 @@ var threeSum = function(nums) {
     for (let start = 0; start <= end; start += 1){
         let init = start + 1;
         let final = end
-        while(init < final) {
+        while(init <= final) {
             currSum = 0;
             currSum += nums[start]
             currSum += nums[init]
             currSum += nums[final]
             if(currSum === 0) {
-                let index = [nums[start], nums[init], nums[final]].toString();
-                currArr[index] = [nums[start], nums[init], nums[final]]
+                let addArr = [nums[start], nums[init], nums[final]];
+                let index = addArr.join('');
+                currArr[index] = addArr;
             }
 
             if (currSum > 0) {
@@ -37,5 +38,5 @@ var threeSum = function(nums) {
     console.log(resArr);
 };
 
-const nums = [-1,0,1,2,-1,-4]
+const nums = [1,1,1]
 threeSum(nums);
