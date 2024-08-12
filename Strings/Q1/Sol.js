@@ -1,4 +1,4 @@
-let s = 'pwwkew';
+let s = "abcabcbb";
 let maxlen = -99999;
 let i = 0;
 let currLen = 0;
@@ -13,18 +13,17 @@ if (s.length < 1) {
             hash[i] = 0;
         }
 
-        while  (index < s.length) {
+        while (index < s.length) {
             hash[s[index]] += 1;
-            
             if (hash[s[index]] < 2) {
-                hash[s[index]] += 1;
-                index += 1;
-                maxlen = Math.max(maxlen, index - i);
+                maxlen = Math.max(maxlen, index - i + 1);
             } else {
-                hash[s[index]] -= 1;
-                i += 1;
-                index += 1;
+                while(hash[s[index]] > 1) {
+                    hash[s[i]] -= 1;
+                    i += 1;
+                }
             }
+            index++
         }
     }
 }
