@@ -4,11 +4,10 @@ const isPrime = (num) => {
     if (num < 4) {
         return true;
     }
+
     let i = 2;
     while (i <= Math.sqrt(num)) {
-        if (num % i === 0) {
-        return false;
-        }
+        if (num % i === 0) return false;
         i += 1;
     }
 
@@ -18,12 +17,15 @@ const isPrime = (num) => {
 const findValidFactors = (num) => {
     let i = 2;
     let sum = 0;
-    while( i <= num){
-        while (num % i === 0) {
+    
+    while(num != 1) {
+        if (num % i === 0) {
             sum += i;
             num /= i;
+        } else {
+            i += 1;
         }
-        i++;
+
     }
     
     return sum
@@ -35,4 +37,4 @@ const smallestPrimeFactor = (num) => {
     return smallestPrimeFactor(findValidFactors(num));
 }
 
-console.log(smallestPrimeFactor(126)); // 5
+console.log(smallestPrimeFactor(15)); // 5
