@@ -37,4 +37,4 @@ const smallestPrimeFactor = (num) => {
     return smallestPrimeFactor(findValidFactors(num));
 }
 
-console.log(smallestPrimeFactor(15)); // 5
+console.log(smallestPrimeFactor(121)); // 5

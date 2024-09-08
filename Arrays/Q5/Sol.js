@@ -4,6 +4,8 @@
  */
 
 var threeSum = function(nums) {
+    nums = nums.sort((a, b) => a - b);
+    
     let end = nums.length - 1;
     let currSum = 0;
     let res = 0;
@@ -36,5 +38,5 @@ var threeSum = function(nums) {
     console.log(res);
 };
 
-const nums = [0, -1, 0, 7]
+const nums = [1, 7, 0, -1]
 threeSum(nums);

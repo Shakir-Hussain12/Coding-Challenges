@@ -35,6 +35,11 @@ for (let i of str) {
         default: break;
     }
 
+    if(stack.length === 0) {
+        console.log(false);
+        return;
+    }
+
 }
 console.log("Balanced")
 
