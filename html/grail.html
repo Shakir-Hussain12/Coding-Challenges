@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail</title>
+    <style>
+        main {
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "aside section section"
+                "footer footer footer";
+            grid-template-rows: 100px 1fr 100px;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        section {
+            grid-area: section;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header style="border: solid"></header>
+        <side style="border: solid; border-color: green"></side>
+        <section style="border: solid; border-color: blue"></section>
+        <footer style="border: solid"></footer>
+    </main>
+</body>
+</html>
