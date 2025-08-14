@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+
+    <style>
+        td {
+            padding: 5px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        th:not(:first-child) {
+            padding-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="addItem()">Testing</h1>
+    <table>
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th onclick="handleSort(1)">Amount</th>
+            <th onclick="handleSort(2)">Date</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Rows will be inserted here -->
+        </tbody>
+    </table>
+    
+    <script src="./test.js"></script>
+</body>
+</html>
